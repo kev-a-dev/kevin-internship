@@ -32,6 +32,7 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
+          {data.length && 
           <OwlCarousel items='4' loop='true' nav='true'>
           {data.map((item, index) => (
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
@@ -57,6 +58,7 @@ const HotCollections = () => {
             </div>
           ))}
           </OwlCarousel>
+          }
         </div>
       </div>
     </section>
