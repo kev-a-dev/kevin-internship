@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-
 const HotCollections = () => {
-  
+
   const [data, setData] = useState([]);
   
   useEffect(() => {
@@ -19,6 +19,13 @@ const HotCollections = () => {
         console.error(error);
       });
   }, [])
+
+  const options = {
+    items: 4,
+    loop: true,
+    nav: true,
+    margin: 10
+  }
   
   console.log(data);
 
@@ -33,10 +40,10 @@ const HotCollections = () => {
             </div>
           </div>
           {data.length && 
-          <OwlCarousel items='4' loop='true' nav='true'>
+          <OwlCarousel {...options}>
           {data.map((item, index) => (
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
-              <div className="nft_coll">
+        
+              <div className="nft_coll" key={index}>
                 <div className="nft_wrap">
                   <Link to="/item-details">
                     <img src={item.nftImage} className="lazy img-fluid" alt="" />
@@ -55,7 +62,6 @@ const HotCollections = () => {
                   <span>ERC-{item.code}</span>
                 </div>
               </div>
-            </div>
           ))}
           </OwlCarousel>
           }
