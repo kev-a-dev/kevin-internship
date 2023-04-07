@@ -24,6 +24,63 @@
 
 /* ================================================== */
 
+/* hot collections skeleton */
+
+/* ================================================== */
+
+.skeleton {
+  background-color: #dddbdd;
+  overflow: hidden;
+  position: relative;
+}
+
+.skeleton::after {
+  /* background: linear-gradient(to right, rgb(222, 222, 222) 0%, rgb(255, 255, 255) 50%, rgb(222, 222, 222) 100%); */
+  animation: shimmer 2s infinite;
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,0) ,hsla(0,0%,100%,.2) 20%,hsla(0, 0%, 100%, 0.755) 60%,hsla(0,0%,100%,0));
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+}
+.skeleton.img {
+  width: 100%;
+  height: 100%;
+}
+
+.skeleton.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.skeleton.name {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.skeleton.erc {
+  margin: 10px auto;
+  width: 60px;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ================================================== */
+
 /* body */
 
 /* ================================================== */
