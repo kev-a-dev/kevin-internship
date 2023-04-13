@@ -18,7 +18,7 @@ const HotCollections = () => {
         setLoading(false);
       }
       fetchData();
-  }, [])
+  }, [loading])
 
   const options = {
     items: 4,
