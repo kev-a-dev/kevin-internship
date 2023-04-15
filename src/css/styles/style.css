@@ -58,13 +58,41 @@
 }
 
 .skeleton.name {
-  margin: 0 auto;
+  margin: 10px 0;
+  width: 100px;
+}
+
+.skeleton.countdown {
+  float: right;
   width: 100px;
 }
 
 .skeleton.erc {
   margin: 10px auto;
   width: 60px;
+}
+
+.skeleton.price {
+  width: 40px;
+  height: 20px;
+}
+
+/* new items skeleton */
+
+.skeleton.new.item {
+  max-width: 316px;
+  width: 100%;
+  max-height: 475px;
+  height: 100%;
+}
+
+.skeleton.new.item.name {
+  width: 100px;
+}
+
+.skeleton.likes {
+  width: 30px;
+  height: 20px;
 }
 
 @keyframes shimmer {
