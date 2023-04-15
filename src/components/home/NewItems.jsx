@@ -19,6 +19,38 @@ const NewItems = () => {
     fetchData();
 }, [loading])
 
+function Countdown({ expiryDate }) {
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  function getTimeLeft() {
+    const totalSeconds = Math.floor((new Date(expiryDate) - new Date()) / 1000);
+    if (totalSeconds < 0) return null;
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    return { days, hours, minutes, seconds };
+  }
+
+  if (!timeLeft) return null;
+
+  return (
+    <div className="de_countdown">
+      {timeLeft.hours ? `${timeLeft.hours}h ` : ''}
+      {timeLeft.minutes ? `${timeLeft.minutes}m ` : ''}
+      {`${timeLeft.seconds}s`}
+    </div>
+  );
+}
+
+
 const options = {
   items: 4,
   loop: true,
@@ -120,7 +152,7 @@ const options = {
                     <i className="fa fa-check"></i>
                   </Link>
                 </div>
-                <div className="de_countdown">5h 30m 32s</div>
+                { nft.expiryDate ? ( <Countdown expiryDate={nft.expiryDate} /> ) : null}
 
                 <div className="nft__item_wrap">
                   <div className="nft__item_extra">
