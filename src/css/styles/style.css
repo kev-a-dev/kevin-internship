@@ -95,6 +95,8 @@
   height: 20px;
 }
 
+/* top sellers skeleton */
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
