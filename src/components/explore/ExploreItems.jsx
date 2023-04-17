@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const ExploreItems = () => {
+  const [selected, setSelected] = useState('')
   const [num, setNum] = useState(8)
   const [showLoading, setShowLoading] = useState(true)
   const [data, setData] = useState([]);
@@ -17,12 +18,21 @@ const ExploreItems = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const {data} = await axios.get('https://us-central1-nft-cloud-functions.cloudfunctions.net/explore');
+      let url = 'https://us-central1-nft-cloud-functions.cloudfunctions.net/explore';
+      let filter = '';
+      if (selected === 'price_low_to_high') {
+        filter = '?filter=price_low_to_high'
+      } else if (selected === 'price_high_to_low') {
+        filter = '?filter=price_high_to_low'
+      } else if (selected === 'likes_high_to_low') {
+        filter = '?filter=likes_high_to_low'
+      }
+      const {data} = await axios.get(url + filter);
       setData(data);
       setLoading(false);
     }
     fetchData();
-  }, [loading])
+  }, [loading, selected])
 
   function Countdown({ expiryDate }) {
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
@@ -58,7 +68,7 @@ const ExploreItems = () => {
   return (
     <>
       <div>
-        <select id="filter-items" defaultValue="">
+        <select id="filter-items" defaultValue="" value={selected} onChange={(event) => setSelected(event.target.value)}>;
           <option value="">Default</option>
           <option value="price_low_to_high">Price, Low to High</option>
           <option value="price_high_to_low">Price, High to Low</option>
