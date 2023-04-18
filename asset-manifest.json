@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kevin-internship/static/css/main.3b123ad6.css",
-    "main.js": "/kevin-internship/static/js/main.9647e255.js",
+    "main.css": "/kevin-internship/static/css/main.bedf2d60.css",
+    "main.js": "/kevin-internship/static/js/main.1ee5ba3b.js",
     "static/js/787.0979ab29.chunk.js": "/kevin-internship/static/js/787.0979ab29.chunk.js",
     "static/media/icofont.woff": "/kevin-internship/static/media/icofont.dad3accba068281878f1.woff",
     "static/media/icofont.woff2": "/kevin-internship/static/media/icofont.9c33516aab48c61e3081.woff2",
@@ -26,12 +26,12 @@
     "static/media/bg-shape-1.jpg": "/kevin-internship/static/media/bg-shape-1.ba54a8e086d0e99d912d.jpg",
     "index.html": "/kevin-internship/index.html",
     "static/media/ethereum.svg": "/kevin-internship/static/media/ethereum.df265e367364f285053a1285ad8d418d.svg",
-    "main.3b123ad6.css.map": "/kevin-internship/static/css/main.3b123ad6.css.map",
-    "main.9647e255.js.map": "/kevin-internship/static/js/main.9647e255.js.map",
+    "main.bedf2d60.css.map": "/kevin-internship/static/css/main.bedf2d60.css.map",
+    "main.1ee5ba3b.js.map": "/kevin-internship/static/js/main.1ee5ba3b.js.map",
     "787.0979ab29.chunk.js.map": "/kevin-internship/static/js/787.0979ab29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b123ad6.css",
-    "static/js/main.9647e255.js"
+    "static/css/main.bedf2d60.css",
+    "static/js/main.1ee5ba3b.js"
   ]
 }
