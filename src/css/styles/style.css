@@ -95,7 +95,25 @@
   height: 20px;
 }
 
-/* top sellers skeleton */
+/* author skeleton */
+
+.skeleton.author.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+}
+
+.skeleton.author.info {
+  width: 200px;
+  height: 100px;
+  border-radius: 30px;
+}
+
+.skeleton.author.follower {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
 
 @keyframes shimmer {
   0% {

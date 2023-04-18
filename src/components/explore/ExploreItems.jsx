@@ -79,7 +79,7 @@ const ExploreItems = () => {
         new Array(8).fill(0).map((_, index) => (
         <div
           key={index}
-          className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12 skeleton"
+          className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
           style={{ display: "block", backgroundSize: "cover" }}
         >
           <div className="nft__item skeleton new item" key={index}>
