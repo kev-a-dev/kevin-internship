@@ -5,6 +5,7 @@ import axios from "axios";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Aos from "aos";
 
 const NewItems = () => {
   const [data, setData] = useState([]);
@@ -17,6 +18,13 @@ const NewItems = () => {
       setLoading(false);
     }
     fetchData();
+    Aos.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      offset: 200,
+      delay: 100,
+      once: true,
+    });
 }, [loading])
 
 function Countdown({ expiryDate }) {
@@ -73,7 +81,7 @@ const options = {
 }
 
   return (
-    <section id="section-items" className="no-bottom">
+    <section id="section-items" className="no-bottom" data-Aos='fade-in'>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
