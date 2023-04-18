@@ -6,6 +6,9 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 const HotCollections = () => {
 
   const [data, setData] = useState([]);
@@ -18,6 +21,13 @@ const HotCollections = () => {
         setLoading(false);
       }
       fetchData();
+      Aos.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        offset: 200,
+        delay: 100,
+        once: true,
+      });
   }, [loading])
 
   const options = {
@@ -43,7 +53,7 @@ const HotCollections = () => {
 
   return (
     <section id="section-collections" className="no-bottom">
-      <div className="container">
+      <div className="container" data-Aos='fade-in'>
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">

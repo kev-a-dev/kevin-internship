@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Aos from "aos";
 
 const TopSellers = () => {
   const [data, setData] = useState([]);
@@ -13,10 +14,17 @@ const TopSellers = () => {
       setLoading(false);
     }
     fetchData();
+    Aos.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      offset: 200,
+      delay: 100,
+      once: true,
+    });
   }, [loading])
 
   return (
-    <section id="section-popular" className="pb-5">
+    <section id="section-popular" className="pb-5" data-Aos='fade-in'>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
