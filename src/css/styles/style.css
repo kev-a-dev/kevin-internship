@@ -115,6 +115,9 @@
   border-radius: 10px;
 }
 
+/* item skeleton */
+
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);

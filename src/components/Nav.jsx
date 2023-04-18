@@ -39,7 +39,7 @@ const Nav = () => {
               <div className="de-flex-col header-col-mid">
                 <ul id="mainmenu">
                   <li className="menu-item-has-children has-child">
-                    <Link to="/">
+                    <Link to="/kevin-internship">
                       Home<span></span>
                     </Link>
                   </li>
